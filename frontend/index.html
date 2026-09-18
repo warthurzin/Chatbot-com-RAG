@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cineasta - Chatbot de Filmes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="pagina">
+      <header class="cabecalho">
+        <div class="cabecalho-conteudo">
+          <span class="marca-icone">&#9670;</span>
+          <div class="marca-texto">
+            <h1>Cineasta</h1>
+            <p>Pergunte sobre filmes da nossa base de conhecimento</p>
+          </div>
+        </div>
+        <button id="botao-nova-conversa" class="botao-secundario" type="button">
+          Nova conversa
+        </button>
+      </header>
+
+      <main class="janela-chat" id="janela-chat" aria-live="polite">
+        <div class="mensagem mensagem-sistema">
+          <p>
+            Ola. Sou um assistente que responde perguntas sobre um catalogo de
+            100 filmes (dados do TMDb - The Movie Database). Posso responder
+            sobre sinopse, diretor, elenco, genero, duracao, ano de lancamento,
+            orcamento, bilheteria e avaliacao dos filmes da base. Se eu nao
+            encontrar uma informacao, e porque ela nao esta disponivel na base
+            ou o filme perguntado nao faz parte dela.
+          </p>
+        </div>
+      </main>
+
+      <form id="formulario-chat" class="area-entrada">
+        <input
+          id="campo-mensagem"
+          type="text"
+          placeholder="Pergunte, por exemplo: quem dirigiu o filme Parasita?"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="botao-enviar">Enviar</button>
+      </form>
+
+      <p class="rodape-status" id="rodape-status"></p>
+      <p class="rodape-atribuicao">
+        Este produto usa a API do TMDb, mas nao e endossado ou certificado pelo
+        TMDb.
+      </p>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

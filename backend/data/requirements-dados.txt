@@ -1,0 +1,10 @@
+# Dependencias utilizadas apenas pelos scripts de coleta/preparacao da
+# base de conhecimento (backend/data/coletar_tmdb.py), executados uma
+# vez durante o desenvolvimento para gerar o arquivo filmes.json.
+#
+# Nao sao necessarias para rodar a aplicacao (API, indexacao, chat) e
+# portanto nao estao no requirements.txt principal nem no Dockerfile.
+#
+# Uso:
+#   pip install -r data/requirements-dados.txt
+requests>=2.31,<3

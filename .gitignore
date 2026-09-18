@@ -1,0 +1,25 @@
+# Variaveis de ambiente (contem segredos, nunca deve ser commitado)
+.env
+
+# Ambiente virtual Python
+backend/venv/
+venv/
+
+# Cache e artefatos de execucao do Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Indice FAISS gerado localmente (e reconstruido no build da imagem
+# Docker a partir de backend/data/filmes.json, entao nao precisa ser
+# versionado; a base de dados em si, filmes.json, e versionada)
+backend/index/
+
+# Arquivos de sistema operacional e editor
+.DS_Store
+.vscode/
+*.swp
+
+# Logs
+*.log
